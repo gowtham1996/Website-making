@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title>Mass Bunk</title>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="css/style.css">
+	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	    <script type="text/javascript">
+	    	$(document).ready(function(){
+		    	var windowHeight = $(window).height();
+	    		$(".conMap").css("height",windowHeight);
+	    		// var windowWidth = $(window).width();
+	    		// $(".contactMain").css("width",windowWidth);
+	    	});
+	    </script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row conMap">
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="col-sm-6 conFormInput">
+							<h1> Let's Talk </h1>
+							<form action="">
+								<input type="text" name="name" placeholder="Name">
+								<input type="text" name="email_id" placeholder="Email_id">
+								<input type="text" name="mobile" placeholder="Mobile">
+								<input type="text" name="join_us" placeholder="Join us">
+								<label for="file-upload" class="custom-file-upload">
+								    Resume / Portfolio  <i class="fas fa-download"></i>
+								</label>
+								<input id="file-upload" type="file"/>
+								<a href="#" class="btnStarted">
+									Get started <img src="./img/ok.png">
+								</a>
+							</form>
+						</div>
+						<div class="col-sm-6 conFormMap">
+							<h1> We're here </h1>
+							<br>
+							<p>Our door is always open for<br> a cup of coffee</p>
+							<h3>Our Office</h3><br>
+							<h4>19,Jagadish Nagar,1st cross,<br>Arul Nagar,Nandhivaram,<br>
+								Guduvancherry,Chennai-603202.<br><br>
+								Contact : +91 9940454385
+							</h4>
+							<div>
+								<span class="icon"></span>
+								<span class='insta'></span>
+								<span class='twitter'></span>
+								<span class='whatsapp'></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

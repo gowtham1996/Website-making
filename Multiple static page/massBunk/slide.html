@@ -1,0 +1,67 @@
+<html>
+<head>
+	<title>Mass Bunk</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+
+    		// $("#logoSlider").css("left","620px");	
+    		var windowHeight = $(window).height();
+    		$(".main").css("height",windowHeight);
+			var i=0;
+			var intervalId = null;
+			var imgMove = function(){
+				i=Number(i)+5;
+				$('#myRange').val(i);
+				if(i==25)
+				{
+					$('.text').css("display","none");
+				}
+				if(i==100)
+				{
+					// alert("enter");
+					clearInterval(intervalId);
+					// window.location.href = './index.html';
+				}
+			}
+			setTimeout(function(){
+				intervalId = setInterval(imgMove, 100);
+			},3000)
+			
+			var slider = document.getElementById("myRange");
+			// var output = document.getElementById("demo");
+			// output.innerHTML = slider.value;
+
+			slider.oninput = function() {
+				if(this.value > 20)
+					$('.text').css("display","none");
+				if(this.value < 20)
+					$('.text').css("display","inline");
+			  // output.innerHTML = this.value;
+			}
+		});
+    </script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 main">
+				<!-- <div class="slideImg">
+					<img src="./img/logoSlider.png" id="logoSlider" class="logo"><span class="con">Slide to digitize your world</span>
+				</div> -->
+				<div class="slidecontainer">
+					<input type="range" min="1" max="100" value="1" class="slider" id="myRange">
+					<text class = "text" x='0' y='15' font-size='20'>Slide to digitize your world</text>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
